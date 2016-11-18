@@ -2,10 +2,9 @@ var template = require('email-templates').EmailTemplate,
     async = require('async'),
     nodemailer = require('nodemailer');
 
-var user = {
-  nick: "JuanMa Ruiz",
-  title: "Bazinga is the new black"
-}
+var config = require('./config'),
+    userData = require('./data');
+
 
 var send = function(to, subject, templ, data) {
   /**
@@ -31,13 +30,13 @@ var send = function(to, subject, templ, data) {
     var connection = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
-        user: "johndoe@email.com", // email account
-        pass: "coolPassword" // your pass
+        user: config.email, // email account
+        pass: config.pass // your pass
       }
     });
 
     var email = {
-      from: "johndoe@email.com",  // this email account should be the same as before auth.user
+      from: config.email,  // this email account should be the same as before auth.user
       to: to, // recipient, passed as parameter to the function
       subject: subject, // subject, passed as parameter to the function
       html: html // template, passed as parameter to the function
@@ -53,4 +52,4 @@ var send = function(to, subject, templ, data) {
  * @type {String} - Path to folder which contains the template to render
  * @type {Variable} - Variable which holds the data you want to render in the template
  */
-send("mailTo@email.com", "Bazinga: This is the subject of the mail", "./tmp/", user);
+send("ruizjuanma@gmail.com", "Bazinga: This is the subject of the mail", "./tmp/", userData);
