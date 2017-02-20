@@ -1,3 +1,5 @@
+![dependencies](https://david-dm.org/JuanMaRuiz/node-send-mail.svg)
+![project version](https://img.shields.io/badge/version-0.1.1-green.svg)
 # Basic node app to send email
 
 In this app we're using this packages:

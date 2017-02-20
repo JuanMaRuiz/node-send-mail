@@ -4,7 +4,7 @@
   "author": "JuanMaRuiz",
   "license": "MIT",
   "description": "Simple node application to send mails",
-  "main": "server.js",
+  "main": "index.js",
   "dependencies": {
     "async": "^2.1.5",
     "email-templates": "^2.5.4",
