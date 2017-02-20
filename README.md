@@ -9,10 +9,10 @@ In this app we're using this packages:
 
 * Install dependencies:
 ```
-npm i
+$ npm i
 ```
 * Open ```index.js``` and set your desired values for the arguments of the ```send``` function.
 * Run the application as usual:
 ```
-node index.js
+$ node index.js
 ```
